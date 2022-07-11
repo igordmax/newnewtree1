@@ -1,5 +1,5 @@
 <template>
-    <div class="container center" id="demo">
+    <div class="container center" id="MyComponent">
   
   <ul class="cd-accordion-menu">
     
@@ -10,6 +10,28 @@
 </template>
 
 <script>
+let treeData = {
+
+        name: "group",        
+  children: [
+    {
+      name: "Sub Group",
+      children: [{ name: "Item" }, { name: "Item" }]
+    },
+     {
+      name: "Sub Group1",
+      children: [
+        { name: "Item1" }, 
+        { name: "Item1", 
+         children: [
+           {name: "subsub"}
+         ]
+        }
+      ]
+     },
+    { name: "Item" }
+  ] 
+                 };
 export default {
   name: 'MyComponent',
   template:`<li :class="[isFolder ? 'folder' : 'file']">
@@ -38,9 +60,12 @@ export default {
     model: Object
   },
   data: function() {
+    
     return {
-      open: true
+      open: true,
+      treeData: treeData
     };
+
   },
   computed: {
     isFolder: function() {
@@ -64,7 +89,8 @@ e.preventDefault();
         //console.log(this.classList.contains("selectedMenu")); 
       }      
     },
-  }
+  },
+
 
  
 };
