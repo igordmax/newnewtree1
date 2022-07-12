@@ -10,7 +10,7 @@
 </template>
 
 <script>
-let treeData = {
+var treeData = {
 
         name: "group",        
   children: [
@@ -79,8 +79,8 @@ e.preventDefault();
 },
     makeActive: function(){
       //list.forEach(el=>{el.classList.remove("active");});
-//document.getElementById("clickToAct").classList.add("active");
-     // alert(document.getElementById("clickToAct").className);
+      //document.getElementById("clickToAct").classList.add("active");
+      // alert(document.getElementById("clickToAct").className);
     /* this.addClass('active');*/
     },
     toggle: function() {
@@ -94,7 +94,6 @@ e.preventDefault();
 
  
 };
-
 
 </script>
 
