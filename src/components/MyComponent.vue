@@ -1,17 +1,16 @@
 <template>
-    <div class="container center" id="MyComponent">
+    <div id="MyComponent">
   
   <ul class="cd-accordion-menu">
     
-    <item :model="treeData"></item>
+    <div :model="treeData"></div>
     
   </ul>
 </div>
 </template>
 
 <script>
-var treeData = {
-
+let treeData = {
         name: "group",        
   children: [
     {
